@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>autobookmark...........</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       
+        <span style="cursor: hand; text-decoration: underline;" onclick="window.external.AddFavorite(location.href, document.title);">
+            Click here to add this page to your favorites</span>
+            
+        <h2>Click on the respective links below to bookmark the same</h2>
+        <a href="http://www.developersnippets.com" title="developersnippets.com" id="bookmark">DeveloperSnippets</a>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+   $("a#bookmark").click(function(e)
+{
+	e.preventDefault(); // this will prevent the anchor tag from going the user off to the link
+	
+	var bookmarkUrl = this.href;
+	var bookmarkTitle = this.title;
+	
+	if ($.browser.mozilla) // For Mozilla Firefox Bookmark
+	{ 
+		window.sidebar.addPanel(bookmarkTitle, bookmarkUrl,"");
+	} 
+	
+	else if ($.browser.msie) // For IE Favorite
+	{ 
+		window.external.AddFavorite( bookmarkUrl, bookmarkTitle); 
+	}
+	
+	else if ($.browser.opera ) // For Opera Browsers
+	{ 
+		$(this).attr("href",bookmarkUrl);
+		$(this).attr("title",bookmarkTitle);
+		$(this).attr("rel","sidebar");
+		$(this).click();
+	}
+	 
+	else // for other browsers which does not support
+	{ 
+		alert('Please hold Command+D (On Mac OS) or CTRL+D (On Windows and Linux) and click the link to bookmark it in your browser.');
+	}
+	
+	return false; 
+});
+    </script>
+    
+    </body>
+
+</html>

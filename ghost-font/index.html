@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Stephen Hawking Voice Generator (play/download) ― LingoJam</title>
+
+<meta name="viewport" content="width=device-width">
+
+
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+<script type="text/javascript" src="./figlet.js"></script>
+ 
+<script>
+ figlet.fonts(function(err, fonts) {
+    if (err) {
+        console.log('something went wrong...');
+        console.dir(err);
+        return;
+    }
+    console.dir(fonts);
+});
+    figlet('ashish', 'Standard', function(err, text) {
+        if (err) {
+            console.log('something went wrong...');
+            console.dir(err);
+            return;
+        }
+        console.log(text);
+    });
+ 
+</script> 
+
+</head>
+<body>
+
+
+</body>
+</html>

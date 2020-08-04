@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Buffer solution is the solution which resists the change in the pH of solution ">
+    <meta name="keywords" content="buffer solution, ph in buffer solution , buffer">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta property="og:title" content="Buffer solution explained ">
+    <meta property="og:url" content="site url">
+    <meta property="og:description"
+        content="Buffer solution is the solution which resists the change in the pH of solution ">
+    <meta property="og:type" content=Website>
+    <meta property="og:image"
+        content="https://1.bp.blogspot.com/-AzoqXCDz-XQ/XyAg7TBWYbI/AAAAAAAAluI/FHfmqjMNijUwfbIWVpVHis8pyYYms87GQCNcBGAsYHQ/d/buffer-solution%2B%25281%2529.png">
+    <meta property="fb:app_id" content=966242767657>
+    <meta property="twitter:card"
+        content='https://1.bp.blogspot.com/-AzoqXCDz-XQ/XyAg7TBWYbI/AAAAAAAAluI/FHfmqjMNijUwfbIWVpVHis8pyYYms87GQCNcBGAsYHQ/d/buffer-solution%2B%25281%2529.png'>
+    <meta property="twitter:site" content="@ashishfgiet">
+    <meta property="twitter:title" content="Buffer solution">
+    <meta property="twitter:description"
+        content="Buffer solution is the solution which resists the change in the pH of solution ">
+    <meta property="twitter:creator" content="@ashishfgiet">
+    <meta property="twitter:image"
+        content="https://1.bp.blogspot.com/-AzoqXCDz-XQ/XyAg7TBWYbI/AAAAAAAAluI/FHfmqjMNijUwfbIWVpVHis8pyYYms87GQCNcBGAsYHQ/d/buffer-solution%2B%25281%2529.png">
+    <link href="" rel=canonical>
+    <style>
+        .red {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: space-between
+        }
+
+        b {
+            padding: 8px;
+            margin: 5px;
+            font-size: 22px;
+            display: inline-block;
+            border: 1px solid #777;
+            cursor: pointer;
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.7),-3px -3px 5px rgba(255,255,255,0.3);
+
+        }
+        b:focus{
+            box-shadow:inset 3px 3px 5px rgba(0,0,0,0.7),inset -3px -3px 5px rgba(255,255,255,0.3);
+        }
+
+        .ct {
+            display: none;
+            padding: 10px 20px;
+            position: fixed;
+            top:100px;
+            right: 100px;
+            background: #000;
+            color: greenyellow
+        }
+    </style>
+</head>
+
+<body class="main">
+    <h1>emoji</h1>
+    <div class="red">
+   
+
+    </div>
+
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+
+/*
+                function copytext(element) {
+                    var $temp = $("<input>");
+                    $("body").append($temp);
+                    $temp.val($(element).text()).select();
+                    document.execCommand("copy");
+                    $temp.remove();
+                    alert('copied')
+                }
+
+
+
+*/
+
+
+
+                fetch("./emoji-cat.json")
+                    .then(function (response) {
+                        return response.json();
+
+                    })
+
+                    .then(function (data) {
+
+                       
+                        for (var i in data) {
+                            console.log(data[i])
+                          // document.querySelector(".red").innerHTML += "<b onclick='copytext(this)'>" + data[i] + "</b><span class='ct'>copied</span>"
+
+                        }
+                    })
+
+
+
+
+  
+
+function copytext(element) {
+var $temp = $("<input>");
+$("body").append($temp);
+$temp.val($(element).text()).select();
+document.execCommand("copy");
+$temp.remove();
+var x=$(element).html();
+//alert($(element).text()+' copied')
+$(element).next().html($(element).text()+' copied')
+$(element).next().fadeIn('slow')
+setTimeout(function(){
+   // $(element).next().fadeOut('slow')
+    $(element).next().css('display','none')
+},800)
+
+}
+</script>
+
+
+</body>
+
+</html>

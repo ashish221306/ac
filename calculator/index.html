@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Calculator 99</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Goole fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600%7CFira+Sans:300,400,400i,600" rel="stylesheet">
+
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/calc.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
+
+    <!-- JS -->
+    <script src="./js/custom.js" defer></script>
+    
+</head>
+
+<body>
+
+<header class="site-header fixed-top bg-black border-bottom border-secondary">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+            <a href="index.html" class="navbar-brand d-inline-flex text-uppercase">Calculator 99 <i class="material-icons ml-2" aria-hidden="true">calculate</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Math calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Science calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Finance Calculator</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!---start-->
+
+       
+            
+            <div class="container">
+               <div class="calculator">
+                   <fieldset id="container">
+                       <form name="calculator">
+               
+                           <input id="display" type="text" name="display" readonly>
+               
+                           <input class="button digits" type="button" value="7" onclick="calculator.display.value += '7'">
+                           <input class="button digits" type="button" value="8" onclick="calculator.display.value += '8'">
+                           <input class="button digits" type="button" value="9" onclick="calculator.display.value += '9'">
+                           <input class="button mathButtons" type="button" value="+" onclick="calculator.display.value += ' + '">
+                           <br>
+                           <input class="button digits" type="button" value="4" onclick="calculator.display.value += '4'">
+                           <input class="button digits" type="button" value="5" onclick="calculator.display.value += '5'">
+                           <input class="button digits" type="button" value="6" onclick="calculator.display.value += '6'">
+                           <input class="button mathButtons" type="button" value="-" onclick="calculator.display.value += ' - '">
+                           <br>
+                           <input class="button digits" type="button" value="1" onclick="calculator.display.value += '1'">
+                           <input class="button digits" type="button" value="2" onclick="calculator.display.value += '2'">
+                           <input class="button digits" type="button" value="3" onclick="calculator.display.value += '3'">
+                           <input class="button mathButtons" type="button" value="x" onclick="calculator.display.value += ' * '">
+                           <br>
+                           <input id="clearButton" class="button" type="button" value="C" onclick="calculator.display.value = ''">
+                           <input class="button digits" type="button" value="0" onclick="calculator.display.value += '0'">
+                           <input class="button mathButtons" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+                           <input class="button mathButtons" type="button" value="/" onclick="calculator.display.value += ' / '">
+                           <input class="button mathButtons" type="button" value="." onclick="calculator.display.value += '.'">
+                           <input class="button mathButtons" type="button" value="&cross;" onclick="calculator.display.value=(calculator.display.value).slice(0,((calculator.display).length-1)) ">
+
+                       </form>
+                   </fieldset>
+               </div>
+            </div>
+        
+<main>
+                <div class="p-3">
+                   <h1 class="text-center">calculator 99</h1>
+                   <p class="text-center text-secondary">Calculator 99 is the free premium platform for online calculation where you can calculate all complex calculation of all subject whether it be math , science or finance .</p>
+                </div>
+                
+             </main>
+       
+
+
+<!--end-->
+  
+    <footer class="bg-success text-black">
+        <div class="container py-5 py-md-6">
+            <div class="row justify-content-md-between">
+                <div class="col-4 col-md-2">
+                    <h2 class="h6">About</h2>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#" class="text-secondary">Team</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Careers</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Blog</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2">
+                    <h2 class="h6 mb-3">Services</h2>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#" class="text-secondary">Branding</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Design</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Photography</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">UX/UI</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2">
+                    <h2 class="h6 mb-3">Social</h2>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#" class="text-secondary">Twitter</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Instagram</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Dribbble</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 mt-4 mt-md-0">
+                    <h2 class="h6 mb-3">Company</h2>
+                    <p class="text-secondary">Focus is a responsive website theme based on Bootstrap 4. We help you to create a site that your users will love.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
