@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>cookie</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./calculator/css/style.css">
+    <script src="./calculator/js/custom.js"></script>
+    <style>
+      .emoji-picker{
+          display: block!important;
+          background: red;
+      }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">cookie</h1>
+    <div class="container">
+        <textarea class="text"></textarea>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js"></script>
+      <script>
+var input=document.querySelector('.text');
+var picker=new EmojiButton({
+    position:'bottom-start'
+})
+picker.on('emoji',function(emoji){
+   input.value+=emoji;
+})
+input.addEventListener('click',function(){
+    picker.pickerVisible?picker.showPicker():picker.showPicker(input)
+})
+      </script>
+</body>
+</html>
+

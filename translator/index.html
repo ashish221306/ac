@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+   <style>
+       		.form-element{
+			width:80%;
+			background-color:#ccc;
+			margin:0 auto;
+			display:block;
+			padding:2%;
+		}
+		.form-element textarea{
+			width:100%;
+			border:1px solid #aaa;
+            padding:6px 4px;
+            height: 300px;
+			border-radius:4px;
+		}
+		#selectlanguage{
+			padding:5px;
+			border-radius:4px;
+        }
+        .form-element #selectlanguage{
+            padding: 10px 20px;
+        }
+        .form-element #selectlanguage option{
+            padding: 10px;
+            margin-top: 5px;
+        }
+		.form-element input[type='button']{
+			padding: 10px 20px;
+			border-radius: 4px;
+			border: 1px solid #666;
+			cursor: pointer;
+			background:#fff;
+			transition:0.2s ease-in-out;
+		}
+		.form-element input[type='button']:hover{
+			background:#666;
+			border-color:#111;
+			color:#fff;
+        }
+        .form-element .transOutput{
+            height: 200px;
+            width: 80%;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgb(107, 106, 106);
+        }
+   </style>
+   
+</head>
+
+<body>
+
+    <div class="form-element">
+        <textarea rows="7" type="text" placeholder="Type here" id="username" required="true"></textarea>
+        <select id="selectlanguage">
+                <option value="hi">Hindi</option>
+                <option value="en">English</option>
+                <option value="mr">Marathi</option>
+                <option value="pa">Punjabi</option>
+                <option value="gu">Gujarati</option>
+                <option value="bn">Bengali</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="ml">Malayalam</option>
+                <option value="ne">Nepali</option>
+                
+                <option value="ru">Russian</option>
+                <option value="fr">French</option>
+                <option value="zh">Chinese</option>
+                <option value="ur">Urdu</option>
+            </select>
+        <input type="button" value="Translate Text">
+        <p class="transOutput"></p>
+        </div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+         function translateFunc() {
+                 var inputval = document.getElementById('username').value;
+                 var language = document.getElementById('selectlanguage').value;
+     
+                 console.log(inputval);
+                 console.log(language);
+     
+                 $(document).ready(function() {
+                     //debugger;
+                     $.getJSON('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20170415T074852Z.f30908e49daf053e.1533851723fbfa2f832c94c5bf992441d9f76604&lang=' + language + '&text=' + inputval, function(json) {
+     
+                         var allResponse = (JSON.stringify(json));
+     
+                         console.log(allResponse);
+     
+                         var JSONObject = JSON.parse(allResponse);
+                         var translatedText = JSONObject["text"];
+                         document.querySelector('.transOutput').innerHTML = '' + translatedText;
+     
+                         
+                     });
+                 });
+             }
+     
+             $('.form-element textarea').keyup(function(){
+                translateFunc();
+                setInterval(translateFunc(),10);
+             })
+              $('.form-element select').change(function(){
+                translateFunc();
+                setInterval(translateFunc(),10);
+             })
+             
+     </script>
+
+</body>
+
+</html>

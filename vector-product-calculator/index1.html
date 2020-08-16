@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="imagetoolbar" content="no">
+    <meta name="msthemecompatible" content="no">
+    <meta name="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google-site-verification" content="4uY9vAJAE_RCGHMtpN-xX99KOF0POXCDfRsUV8lDyg4"/>
+    <meta name="ahrefs-site-verification" content="60a023f1fbb378da183c2a0b54b50f00e4e1a7eb8ef0582e900be220e33678c8">
+    <meta name="description"
+          content="An online calculator for finding the cross product of two vectors, with steps shown."/>
+    <meta name="keywords"
+          content="Cross Product Calculator"/>
+    
+    <link rel="canonical" href="https://www.emathhelp.net/calculators/linear-algebra/cross-product-calculator/"/>
+    
+    <link href="/static/assets/styles/common.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500%7CScada=latin" rel="stylesheet">
+    
+        <link rel="stylesheet" type="text/css" href="/static/css/jquery-ui.min.css" media="all">
+    
+    <link rel="icon" href="/static/favicon.ico" type="image/png">
+    <script type="text/javascript">
+    window.pgjs = window.pgjs || {};
+    pgjs.gdpr = pgjs.gdpr || {};
+    pgjs.publisher = pgjs.publisher || {};
+    pgjs.publisher.name = 'eMathHelp';
+    pgjs.publisher.privacyPolicy = 'https://www.emathhelp.net/privacy-policy/';
+    pgjs.publisher.logo = 'https://www.emathhelp.net/static/assets/images/logo.png';
+    pgjs.publisherCookieWrap = function() {
+        pgjs.loadJS('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+    }
+    </script>
+    <script src="//cdn.pubguru.com/pg.js"></script>
+    
+    <title>Cross Product Calculator - eMathHelp</title>
+    
+        <script type="text/javascript"
+                src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57c73c2c1fe65622"></script>
+        <script type="text/javascript">
+            var addthis_share = {
+                url: "https://www.emathhelp.net/calculators/linear-algebra/cross-product-calculator/"
+            }
+        </script>
+    
+    
+    
+        <script src="https://cdn.adapex.io/hb/aaw.emath-2.js" async></script>
+    
+
+</head>
+<body>
+
+<div id="wrap">
+    <div id="main_inner">
+        <noscript>eMathHelp works best with JavaScript enabled</noscript>
+        
+        
+            
+<header class="header">
+    <div class="container">
+        <a href="/" class="logo">
+            <img src="/static/assets/images/logo.png" width="130" height="73" alt="Logo">
+        </a>
+
+        <div class="header__left"><a href="/note/add/" class="header__link"><i
+                class="ico ico_header i-contribute"></i>Contribute</a><a href="/ask/"
+                                                                         class="header__link"><i
+                class="ico ico_header i-question"></i>Ask a Question</a>
+        </div>
+        <div class="header__right">
+            
+            <a href="/login/?back=/calculators/linear-algebra/cross-product-calculator/" class="header__login">Log in</a>
+            <a href="/register/" class="header__login">Register</a>
+            
+        <script>
+  (function() {
+    var cx = 'partner-pub-2123155254416555:3842679344';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<form action="/search/" id="cse-search-box" class="form-search">
+    <input type="hidden" name="cx" value="partner-pub-2123155254416555:3842679344"/>
+    <input type="hidden" name="cof" value="FORID:10"/>
+    <input type="hidden" name="ie" value="UTF-8"/>
+    <input type="text" name="q" class="form-search__input"  style="padding: 3px 30px 2px 5px;">
+    <button class="form-search__btn"><i class="ico i-search"></i>
+    </button>
+</form>
+            <div class="trigger"></div>
+        </div>
+    </div>
+</header>
+
+<!-- end header-->
+<nav class="navigation">
+    <div class="container">
+        <ul class="nav nav-inner">
+            <li class="nav__item"><a href="/notes/" class="nav__link">Math notes</a>
+            </li>
+            <li class="nav__item"><a href="/calculators/" class="nav__link">Calculators</a>
+            </li>
+            <li class="nav__item"><a href="/webassign-answers/" class="nav__link">Webassign Answers</a>
+            </li>
+            <li class="nav__item"><a href="/math-games-and-logic-puzzles/" class="nav__link">Math Games and Logic Puzzles</a>
+            </li>
+            <li class="nav__item"><a href="/questions/" class="nav__link">Solved Questions</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- end navig-->
+        
+        <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/static/js/main.min.js"></script>
+        
+            <div class="container">
+                <aside>
+    <div id="left-menu" style="float:right; width: 160px;margin-right: 45px;">
+        
+        
+    <div class="google_wrapper" id="z-ad-3">
+        
+            <div data-aaad='true' data-aa-adunit='/317005130/EMH_D160x600_Sticky'></div>
+        
+    </div>
+
+    </div>
+</aside>
+<!-- end sidebar-->
+                <div class="main">
+                    
+    <ol class="breadcrumbs">
+        <li><a href="/">Home</a>
+        </li>
+        <li><a href="/calculators/">Calculators</a>
+        </li>
+        <li><a href="/calculators/linear-algebra/">Linear Algebra Calculators</a>
+        </li>
+        <li><a style="color:goldenrod" href="/calculators/?calcid=55">Math Problem Solver (all calculators)</a></li>
+    </ol>
+
+                    
+    <script type="text/javascript" src="/static/calculators/js/functions.min.js"></script>
+
+                    
+                    
+    <h1 class="title-page">Cross Product Calculator</h1>
+
+                    
+    <section class="page-block">
+        
+        
+        
+        
+        
+        
+    <div class="google_wrapper">
+        
+            <div data-aaad='true' data-aa-adunit='/317005130/EMH_D728x90_1'></div>
+            <div data-aaad='true' data-aa-adunit='/317005130/EMH_M300x250_1'></div>
+        
+
+    </div>
+
+        <p>An online calculator for finding the cross product of two vectors, with steps shown.</p>
+        
+        
+            <div class="text-center"><span class="btn btn_more btn_blue">Show Instructions</span></div>
+<div class="description_text-more">
+<ul>
+    <li>In general, you can skip the multiplication sign, so `5x` is equivalent to `5*x`.</li>
+    <li>In general, you can skip parentheses, but be very careful: e^3x is `e^3x`, and e^(3x) is `e^(3x)`.</li>
+    <li>Also, be careful when you write fractions: 1/x^2 ln(x) is `1/x^2 ln(x)`, and 1/(x^2 ln(x)) is `1/(x^2 ln(x))`.</li>
+    <li>If you skip parentheses or a multiplication sign, type at least a whitespace, i.e. write sin x (or even better sin(x)) instead of sinx.</li>
+    <li>Sometimes I see expressions like tan^2xsec^3x: this will be parsed as `tan^(2*3)(x sec(x))`. To get `tan^2(x)sec^3(x)`, use parentheses: tan^2(x)sec^3(x).</li>
+    <li>Similarly, tanxsec^3x will be parsed as `tan(xsec^3(x))`. To get `tan(x)sec^3(x)`, use parentheses: tan(x)sec^3(x).</li>
+    <li>From the table below, you can notice that sech is not supported, but you can still enter it using the identity `sech(x)=1/cosh(x)`.</li>
+    <li>If you get an error, double-check your expression, add parentheses and multiplication signs where needed, and consult the table below.</li>
+    <li>All suggestions and improvements are welcome. Please leave them in comments.</li>
+    
+</ul>
+<div style="margin: 5px 0;">The following table contains the supported operations and functions:</div>
+<div class="table-container">
+<table class="table">
+    <tr><td><strong>Type</strong></td><td><strong>Get</strong></td></tr>
+    <tr><td colspan="2" class="table__title">Constants</td></tr>
+    <tr><td>e</td><td>e</td></tr>
+    <tr><td>pi</td><td>`pi`</td></tr>
+    <tr><td>i</td><td>i (imaginary unit)</td></tr>
+    <tr><td colspan="2" class="table__title">Operations</td></tr>
+    <tr><td>a+b</td><td>a+b</td></tr>
+    <tr><td>a-b</td><td>a-b</td></tr>
+    <tr><td>a*b</td><td>`a*b`</td></tr>
+    <tr><td>a^b, a**b</td><td>`a^b`</td></tr>
+    <tr><td>sqrt(x), x^(1/2)</td><td>`sqrt(x)`</td></tr>
+    <tr><td>cbrt(x), x^(1/3)</td><td>`root(3)(x)`</td></tr>
+    <tr><td>root(x,n), x^(1/n)</td><td>`root(n)(x)`</td></tr>
+    <tr><td>x^(a/b)</td><td>`x^(a/b)`</td></tr>
+    <tr><td>x^a^b</td><td>`x^(a^b)`</td></tr>
+    <tr><td>abs(x)</td><td>`|x|`</td></tr>
+    <tr><td colspan="2" class="table__title">Functions</td></tr>
+    <tr><td>e^x</td><td>`e^x`</td></tr>
+    <tr><td>ln(x), log(x)</td><td>ln(x)</td></tr>
+    <tr><td>ln(x)/ln(a)</td><td>`log_a(x)`</td></tr>
+    <tr><td colspan="2" class="table__title">Trigonometric Functions</td></tr>
+    <tr><td>sin(x)</td><td>sin(x)</td></tr>
+    <tr><td>cos(x)</td><td>cos(x)</td></tr>
+    <tr><td>tan(x)</td><td>tan(x), tg(x)</td></tr>
+    <tr><td>cot(x)</td><td>cot(x), ctg(x)</td></tr>
+    <tr><td>sec(x)</td><td>sec(x)</td></tr>
+    <tr><td>csc(x)</td><td>csc(x), cosec(x)</td></tr>
+    <tr><td colspan="2" class="table__title">Inverse Trigonometric Functions</td></tr>
+    <tr><td>asin(x), arcsin(x), sin^-1(x)</td><td>asin(x)</td></tr>
+    <tr><td>acos(x), arccos(x), cos^-1(x)</td><td>acos(x)</td></tr>
+    <tr><td>atan(x), arctan(x), tan^-1(x)</td><td>atan(x)</td></tr>
+    <tr><td>acot(x), arccot(x), cot^-1(x)</td><td>acot(x)</td></tr>
+    <tr><td>asec(x), arcsec(x), sec^-1(x)</td><td>asec(x)</td></tr>
+    <tr><td>acsc(x), arccsc(x), csc^-1(x)</td><td>acsc(x)</td></tr>
+    <tr><td colspan="2" class="table__title">Hyperbolic Functions</td></tr>
+    <tr><td>sinh(x)</td><td>sinh(x)</td></tr>
+    <tr><td>cosh(x)</td><td>cosh(x)</td></tr>
+    <tr><td>tanh(x)</td><td>tanh(x)</td></tr>
+    <tr><td>coth(x)</td><td>coth(x)</td></tr>
+    <tr><td>1/cosh(x)</td><td>sech(x)</td></tr>
+    <tr><td>1/sinh(x)</td><td>csch(x)</td></tr>
+    <tr><td colspan="2" class="table__title">Inverse Hyperbolic Functions</td></tr>
+    <tr><td>asinh(x), arcsinh(x), sinh^-1(x)</td><td>asinh(x)</td></tr>
+    <tr><td>acosh(x), arccosh(x), cosh^-1(x)</td><td>acosh(x)</td></tr>
+    <tr><td>atanh(x), arctanh(x), tanh^-1(x)</td><td>atanh(x)</td></tr>
+    <tr><td>acoth(x), arccoth(x), cot^-1(x)</td><td>acoth(x)</td></tr>
+    <tr><td>acosh(1/x)</td><td>asech(x)</td></tr>
+    <tr><td>asinh(1/x)</td><td>acsch(x)</td></tr>
+</table>
+</div>
+</div>
+        
+    </section>
+    <!-- end page-block-->
+    <section class="page-block" id="calc_form_container">
+    
+    <form name="calcForm" id="calcForm" method="GET" novalidate action="/calculators/linear-algebra/cross-product-calculator/" class="form-calculator"
+             autocomplete="off">
+        
+    <p><strong>Enter two vectors</strong> or <input class="btn btn_green-2" type="button" name="generateRandom" id="generateRandom" value="Generate Values" onclick="generatePoints();"/></p>
+    <div class="form__row"><p>$$$\mathbf{u}=$$$
+        (<input class="form__input form__input_point" type="text" id="ux" name="ux" value="3"/>, <input class="form__input form__input_point" type="text" id="uy" name="uy" value="1"/>, <input class="form__input form__input_point" type="text" id="uz" name="uz" value="4"/>)
+    </p>
+    </div>
+    <div class="form__row">
+        <p>$$$\mathbf{v}=$$$
+        (<input class="form__input form__input_point" type="text" id="vx" name="vx" value="-2"/>, <input class="form__input form__input_point" type="text" id="vy" name="vy" value="0"/>, <input class="form__input form__input_point" type="text" id="vz" name="vz" value="5"/>)
+    </p>
+    </div>
+    <div class="helplabel">Hint: if you have two-dimensional vectors, set the third coordinate equal to `0`.</div>
+
+        <div style="clear: both;"></div>
+        
+    <div class="google_wrapper">
+        
+            <div data-aaad='true' data-aa-adunit='/317005130/EMH_D728x90_2'></div>
+            <div data-aaad='true' data-aa-adunit='/317005130/EMH_M300v_1'></div>
+        
+    </div>
+
+        <p class="note">If the calculator did not compute something or you have identified an error, please write it in
+            comments below.</p>
+        <p class="note">Write all suggestions in comments below.</p>
+        
+            <div class="form__row">
+                
+                    <input id="steps" type="checkbox" class="form__check" name="steps"
+                           checked="checked">
+                    <label for="steps" class="form__label form__label-check">Show
+                        steps</label>
+                
+            </div>
+        
+        <div class="text-center"><input type="submit" id="solveButton"
+                                        value="Calculate"
+                                        class="btn btn_block btn_blue"/>
+        </div>
+
+    </form>
+
+<script type="text/javascript">
+ function generatePoints(){
+    jQuery("#solution").hide();
+    jQuery("#ux").val(generateRandomValue()+"");
+    jQuery("#uy").val(generateRandomValue()+"");
+    jQuery("#uz").val(generateRandomValue()+"");
+    jQuery("#vx").val(generateRandomValue()+"");
+    jQuery("#vy").val(generateRandomValue()+"");
+    jQuery("#vz").val(generateRandomValue()+"");
+ }
+</script>
+
+    
+        <script type="text/javascript">
+            $(function () {
+                var form = $('#calcForm');
+                var sol = $('#calc_solution'), err = $('#calc_error');
+                var solve_button = $('#solveButton');
+                var controls = form.find('input, select')
+                solve_button.css({
+                    background: "url(/static/assets/images/loading.gif) no-repeat 50% 50% lightgray",
+                    'height': '50px'
+                });
+                controls.prop('disabled', true);
+                window.step = 0;
+                function check_task() {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/check-task/',
+                        data: 'task=cb0d7cb0-1e18-43e8-9b09-2e00ea0cf8b1'
+                    }).done(function (data) {
+                        if ($.isEmptyObject(data)) {
+                            if (window.step > 25) {
+                                solve_button.css({background: "", 'height': ''});
+                                controls.prop('disabled', false);
+                                err.show().html('Something went wrong! Please try again later');
+                            } else {
+                                window.step += 1;
+                                setTimeout(check_task, 2000);
+                            }
+                            return;
+                        }
+                        solve_button.css({background: "", 'height': ''});
+                        controls.prop('disabled', false);
+                        if (data.error) {
+                            err.show().html(data.error);
+                            updateMath(err);
+                        }
+                        if (data.solution || data.answer) {
+                            var i = (data.input || '') + (data.solution || '') + (data.answer || '');
+                            var div = $('<div></div>').html(i);
+                            sol.append(div);
+                            updateMath(div);
+                            (window.aaw = window.aaw || {"cmd": []}).cmd.push(function () {
+                                window.aaw.processAdsOnPage();
+                            });
+                        }
+                    }).fail(function (data) {
+                        solve_button.css({background: "", 'height': ''});
+                        controls.prop('disabled', false);
+                        err.show().html('Something went wrong! Please try again later');
+                    });
+                }
+
+                setTimeout(check_task, 2000);
+            });
+        </script>
+    
+
+    </section>
+    <!-- end page-block-->
+    
+    <section class="page-block lection" id="solution">
+            <div id="calc_solution">
+                
+            </div>
+            <div class="error" id="calc_error" style="display: none;">
+                
+            </div>
+    <div style="margin: 20px 0 10px; padding: 10px 10px; display: block; font-size: 19px; font-weight: 500; text-align: center; color: #fff; background-color: #0a8e0a;">If you like the website, please share it anonymously with your friend or teacher by entering his/her email: <form style="display: inline" id="share-email-form" method="POST" action="/send-email/"><input class="form__input" type="email" name="email" required="required"/><input type="hidden" name="csrfmiddlewaretoken" value="5tSYP0AZAgLkpyACqa1ufo1GXXXlwbLctebuDwP8sxt7V4TylouPn2ATxhhl0omL"><input type="hidden" name="path" value="/calculators/linear-algebra/cross-product-calculator/"> <button class="btn btn_blue" style="margin-left: 5px;">Share</button></form></div>
+    </section>
+    
+    <!-- end page-block-->
+    
+
+                    
+                    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = "emathhelp";
+        var disqus_identifier = "c21";
+        var disqus_title = "Cross Product Calculator";
+        var disqus_config = function () {
+            this.page.url = "https://www.emathhelp.net/calculators/linear-algebra/cross-product-calculator/";
+            this.page.identifier = disqus_identifier;
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+                </div>
+            </div>
+            <!-- end container-->
+        
+    </div>
+    <!-- end #main-->
+</div>
+<script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.dialog.min.js"></script>
+<!-- end wrap-->
+
+<footer class="footer footer_inner">
+            
+			<div class="footer__btm">
+				<div class="container">
+					<ul class="footer__nav">
+                        <li><a href="/about/">About</a>
+						</li>
+						<li><a href="/contact/">Contact</a>
+						</li>
+						<li><a href="/terms-of-use/">Terms of use</a>
+						</li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a>
+						</li>
+						<li><a href="/math-links/">Links</a>
+						</li>
+						<li><a href="/contact/?cs=1">Request a Note</a>
+						</li>
+					</ul>
+					<div class="copyright">Copyright (c) 2020. All rights reserved.</div>
+				</div>
+			</div>
+		</footer>
+<!-- end footer-->
+<script src="/static/js/ads.min.js"></script>
+<script src="/static/js/checker.min.js"></script>
+<script src="/static/assets/scripts/common.min.js"></script>
+<script src="/static/assets/scripts/libs/jquery.fancybox.pack.min.js"></script>
+<script src="/static/assets/scripts/modal.min.js"></script>
+<script type="text/javascript"
+        src="/static/js/tinymce/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        try{prepare_mathjax();}catch(e){}
+    </script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/javascript">
+        var enableMathJax = true;
+    </script>
+
+
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-15640261-3', 'auto');
+        /*
+        var blank_ads = 0;
+        var images = document.getElementsByTagName('img');
+        for (var i = 0; i < images.length; i++){
+            if (images[i].src.indexOf('zedo') > -1 && images[i].src.indexOf('blank') > -1){
+                blank_ads++;
+            }
+        }
+
+        var dimensionValue = 10;
+        if (blank_ads == 1){
+            dimensionValue = 11;
+        }
+        else if(blank_ads == 2){
+            dimensionValue = 12;
+        }
+        else if (!document.getElementById('adblocker_checker')){
+            dimensionValue = 13;
+        }*/
+        //ga('set', 'dimension1', '171.97.101.208');
+        ga('send', 'pageview');
+    </script>
+    
+
+</body>
+</html>

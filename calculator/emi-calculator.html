@@ -1,0 +1,153 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Calculator 99</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Goole fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600%7CFira+Sans:300,400,400i,600" rel="stylesheet">
+
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/emi.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
+
+    <!-- JS -->
+    <script src="./js/custom.js" defer></script>
+    <script src="./js/emi.js"></script>
+    
+</head>
+
+<body>
+
+<header class="site-header fixed-top bg-black border-bottom border-secondary">
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+            <a href="index.html" class="navbar-brand d-inline-flex text-uppercase">Calculator 99 <i class="material-icons ml-2" aria-hidden="true">calculate</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Math calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Science calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Finance Calculator</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!---start-->
+
+       
+            
+            
+                <div id="border">   <!--border-->
+        
+                    <div id="emi-calculation">    <!--calculation part-->
+                      
+                      <p id="title"><strong>EMI Calculator<strong></p> 
+                        
+                        <div class="section">         <!--loan amount with input-->
+                          <label id="loanamount" class="label">Loan Amount:(USD)</label>
+                          <input type="number" class="input" id="value1" placeholder="Enter Loan amount.."></input>
+                        </div>                        <!--loan amount with input closing-->
+                        
+                        <div class="section">   <!--interest rate with input-->
+                           <label id="interestrate" class="label">Interest Rate:(%)</label>
+                          <input type="number" class="input" id="value2" placeholder="Enter IR per year.."></input>
+                        </div>              <!--interest rate with input closing-->
+                        
+                        <div class="section"> <!--loan terms with input-->
+                           <label id="loanduration" class="label">Loan Duration(Months):</label>
+                          <input type="number" class="input" id="value3" placeholder="Enter loan duration.."></input>
+                        </div>   <!--loan terms with input closing-->
+                    
+                   
+                 
+                  <div class="submit">           <!--button-->
+                 <button type="submit" id="calc" onclick="calculation()">Calculate</button>
+                  </div>                          <!--button closing-->
+                  
+                    </div>    <!--Calculation part closing-->
+                    
+                    <div id="emi-output">
+                      <div class="result">Monthly Interest: <span id="monthly-interest"></span>
+                      </div>
+                      <div class="result">Monthly Payment: <span id="monthly-payment"></span>
+                      </div>
+                      <div class="result">Total Repayment: <span id="total-repayment"></span>
+                      </div>
+                      <div class="result">Total Interest Cost: <span id="total-interest"></span>
+                      </div>
+                      
+                    <div class="submit">           <!--button-->
+                 <button type="submit" id="reset" onclick="reset()">Reset</button>
+                  </div>                          <!--button closing-->  
+                      
+                    </div>
+                  
+                  </div> <!--border closing-->
+            
+       
+
+
+<!--end-->
+  
+    <footer class="bg-success text-black">
+        <div class="container py-5 py-md-6">
+            <div class="row justify-content-md-between">
+                <div class="col-4 col-md-2">
+                    <h2 class="h6">About</h2>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#" class="text-secondary">Team</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Careers</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Blog</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2">
+                    <h2 class="h6 mb-3">Services</h2>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#" class="text-secondary">Branding</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Design</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Photography</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">UX/UI</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2">
+                    <h2 class="h6 mb-3">Social</h2>
+                    <ul class="nav flex-column">
+                        <li class="mb-1"><a href="#" class="text-secondary">Twitter</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Instagram</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Dribbble</a></li>
+                        <li class="mb-1"><a href="#" class="text-secondary">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 mt-4 mt-md-0">
+                    <h2 class="h6 mb-3">Company</h2>
+                    <p class="text-secondary">Focus is a responsive website theme based on Bootstrap 4. We help you to create a site that your users will love.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

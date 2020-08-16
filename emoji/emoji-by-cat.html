@@ -90,7 +90,7 @@
 
 
 
-                fetch("./emoji-cat.json")
+                fetch("./emoji-picker.json")
                     .then(function (response) {
                         return response.json();
 
@@ -99,9 +99,9 @@
                     .then(function (data) {
 
                        
-                        for (var i in data) {
-                            console.log(data[i])
-                          // document.querySelector(".red").innerHTML += "<b onclick='copytext(this)'>" + data[i] + "</b><span class='ct'>copied</span>"
+                        for (var i in data.category='People') {
+                            console.log(data[i].category='People')
+                           document.querySelector(".red").innerHTML += "<b onclick='copytext(this)'>" + data[i].emoji + "</b><span class='ct'>copied</span>"
 
                         }
                     })

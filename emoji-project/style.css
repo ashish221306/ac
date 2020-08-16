@@ -1,0 +1,70 @@
+body {
+    margin: 0
+}
+
+.red {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tabs{overflow-x: auto;height: 50px;display: flex;flex-direction: row;}
+b ,button{
+    padding: 8px;
+    margin: 5px;
+    font-size: 22px;
+
+    border: 1px solid #777;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+
+}
+
+b:focus {
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.7), inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+}
+
+.ct {
+    display: none;
+    padding: 20px 40px;
+    position: fixed;
+    font-size: 30px;
+    bottom: 10px;
+    right:100px;
+    background: #000;
+    color: greenyellow
+}
+
+
+.recent {
+    margin: 10px;
+    padding: 50px;
+    border: 2px solid green;
+    font-size: 30px;
+}
+
+.over {
+    background: #ddd;
+    width: 100%;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    margin-bottom: 20px;
+
+}
+
+.over .left {
+    height: 10px;
+    overflow: auto;
+}
+.over .left::-webkit-scrollbar{
+    width: 2px;
+}
+
+.over .right {
+    cursor: pointer;
+    background: rgb(26, 219, 100);
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
