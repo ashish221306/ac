@@ -63,8 +63,6 @@
 
         html,
         body {
-
-            
             font-weight: 500;
             scroll-behavior: smooth;
             margin: 0;
@@ -82,6 +80,7 @@
             color: #ffffff;
             padding: 10px;
             box-shadow: 0px 0px 4px 2px #777;
+            box-sizing: border-box;
         }
 
         header h1 {
@@ -417,7 +416,7 @@
                 <tr>
                     <td></td>
                     <td>=</td>
-                    <td ><span>{{(a1-a2)/a2}} %</span></td>
+                    <td ><span>{{(a1-a2)/a2 |number:5}} %</span></td>
                 </tr>
             </table>
         </div>
