@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cross Product Calculator - calculator90</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(14, 14, 14);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    height: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px; 
+    color:white;
+}
+
+button{
+    border: 2px solid rgb(204, 27, 240);
+    background-color: rgba(253, 179, 68, 0);
+    border-radius: 40px;
+    margin: 20px 30px;
+    padding:20px 40px;
+    color:white;
+    animation: fadeIn 0.150s;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+li{
+    list-style-type: none;
+    margin: 10px 10px;
+    font-size: 20px;
+
+}
+p{
+    margin: 40px 5px;
+}
+i{
+    font-size:25px;
+}
+
+button:hover{
+    background-color: rgba(182, 111, 155, 0.4);
+    transition: 0.2s;
+}
+
+.hidden{
+    display: none;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }  
+}
+
+
+
+@media all and (max-width:1000px){
+    h1{
+        font-size: 60px;
+    }
+    p{
+        margin-bottom: 40px;
+    }
+    
+    .container button{
+        margin: 15px 30px;
+    }
+    .container ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+      <div class="container">
+        <div class="content">
+                <div>
+                    <h1>Stopwatch</h1>
+                     <p><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>
+                     <ul class="laps"></ul>
+                </div>
+                <div>
+                      <button id="btnStart"><i class="fas fa-play" aria-hidden="true"></i></button>
+                      <button id="btnStop" class="hidden"><i class="fas fa-pause"></i></button>
+                      <button id="btnLap" class="hidden"><i class="fas fa-stopwatch"></i></button>
+                      <button id="btnReset" class="hidden"><i class="fas fa-redo-alt"></i></button>
+                 </div>
+        </div>
+    </div>
+<script>
+    var startBtn = document.querySelector('#btnStart');
+var stopBtn = document.querySelector('#btnStop');
+var resetBtn = document.querySelector('#btnReset');
+var lapBtn = document.querySelector('#btnLap');
+
+var tensText = document.querySelector("#tens");
+var secondsText = document.querySelector("#seconds");
+var minutesText = document.querySelector("#minutes");
+var hoursText = document.querySelector("#hours");
+var laps = document.querySelector(".laps");
+
+var tens=0;
+var seconds=0;
+var minutes = 0;
+var hours=0;
+var lapCount=0;
+var timeInterval;
+var hasStarted= false;
+
+// ================================================= EVENT LISTENERS =============================================
+
+
+startBtn.addEventListener("click", ()=> {
+    showButtons();
+    if(hasStarted === false){
+        startTimer();
+        hasStarted=true;
+    }
+ 
+    
+});
+
+resetBtn.addEventListener("click", ()=> {
+    restartTimer();
+});
+
+lapBtn.addEventListener("click", () =>{
+    if(hasStarted === true){
+        lapCount++;
+        var lap = document.createElement("li");
+        lap.innerHTML = lapCount+": " + hoursText.textContent+':'+minutesText.textContent+':'+secondsText.textContent+':'+tensText.textContent;
+        laps.append(lap);   
+    }
+});
+
+
+stopBtn.addEventListener("click", () =>{
+    hasStarted=false;
+    clearInterval(timeInterval);
+});
+
+
+//=========================================================== TIMER LOGIC ==================================================================
+
+
+function startTimer(){   
+    timeInterval = setInterval(function(){
+        tens++;
+        if(tens>=100){
+            tens=0;
+            seconds++;
+            if(seconds >= 60){
+                minutes++;
+                seconds=0;
+                if(minutes >=60){
+                        hours++;
+                        minutes=0;
+                } 
+            }     
+        } 
+        manageText();     
+}, 10);
+
+   // ================================================= UPDATING TEXT DISPLAY =============================================
+
+function manageText() {
+        // Tens
+        if (tens >= 10) {
+            tensText.innerHTML = tens;
+        }
+        else {
+            tensText.innerHTML = "0" + tens;
+        }
+        
+        // Seconds
+        if (seconds >= 10) {
+            secondsText.innerHTML = seconds;
+        }
+        else {
+            secondsText.innerHTML = "0" + seconds;
+        }
+        // Minutes
+
+        if (minutes >= 10) {
+            minutesText.innerHTML = minutes;
+        }
+        else {
+            minutesText.innerHTML = '0' + minutes;
+        }
+
+        // Hours
+
+        if (hours >= 10) {
+            hoursText.textContent = hours;
+        }
+        else {
+            hoursText.textContent = '0' + hours;
+        }
+
+    }
+
+}
+
+// ================================================= FUNCTIONS =============================================
+
+function showButtons() {
+    
+    setTimeout(function(){
+        stopBtn.classList.remove("hidden");
+        resetBtn.classList.remove("hidden");
+        btnLap.classList.remove("hidden");
+    },160);
+
+}
+
+function restartTimer(){
+    tens=0;
+    seconds=0;
+    secondsText.innerHTML = '0' + seconds;
+    tensText.innerHTML = '0' + tens;
+    removeChilds(laps);
+}
+
+const removeChilds = (parent) => {
+    while (parent.lastChild) {
+        parent.removeChild(parent.lastChild);
+    }
+};
+
+
+</script>
+</body>
+
+</html>
