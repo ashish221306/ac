@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <title>Percent Error Calculator - calculator90</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=description content="Percent error calculator online with step-by-step answer, graph , property, example and explanation, best available calculator for percent error
+    ">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f1f1f1">
+    <meta name="apple-mobile-web-app-title" content="Percent error Calculator with explanation">
+    <meta name="apple-touch-icon" content="zzinc/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="zzinc/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta property="og:locale" content="en_US" />
+    <meta name=keywords content="Percent error calculator, how to solve percent error question, percent error formula">
+    <meta property="og:site_name" content="calculator90">
+    <meta property="og:title" content="Percent Error Calculator">
+    <meta property="og:description"
+        content="percent error calculator online with step-by-step answer, graph , property, example and explanation, best available calculator for percent error">
+    <meta property="og:type" content=Website>
+    <meta property="og:image" content="https://www.calculator90.com/">
+    <meta property="twitter:card" content='https://www.calculator90.com/'>
+    <meta property="twitter:title" content="percent error Calculator">
+    <meta property="twitter:description"
+        content="percent error calculator online with step-by-step answer, graph , property, example and explanation, best available calculator for percent error">
+    <meta property="twitter:image" content="image url">
+    <link href="https://www.calculator90.com/" rel=canonical>
+   
+
+
+
+    <style>
+        table.stepp td {
+            padding: 5px;
+
+        }
+
+        table.stepp {
+            transform: translateY(10px);
+            margin: 6px;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            display: inline-block;
+        }
+
+        #time {
+            text-shadow: 3px -3px 3px hsl(0, 86%, 67%);
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 7px;
+        }
+
+        table.stepp tr {
+            display: block;
+        }
+
+        html,
+        body {
+
+            
+            font-weight: 500;
+            scroll-behavior: smooth;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: rgb(25, 26, 25);
+        }
+
+        header {
+            text-align: center;
+            background: #000;
+            color: #ffffff;
+            padding: 10px;
+            box-shadow: 0px 0px 4px 2px #777;
+        }
+
+        header h1 {
+            text-shadow: 3px 3px 5px rgba(134, 225, 241, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+        }
+
+       
+
+        header p {
+
+            padding: 10px 40px;
+
+        }
+
+        figure {
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #000;
+            opacity: 0.8;
+            padding: 5px;
+            text-align: center;
+            color: antiquewhite;
+        }
+
+        footer a,
+        header a {
+            text-decoration: none;
+            color: #f1f1f1;
+        }
+
+
+        .formula {
+            padding: 10px;
+            font-weight: 600;
+            
+
+        }
+
+        .formula .mainformula {
+            padding: 5px;
+            background: lightpink;
+            display: inline-block;
+        }
+
+        .example {
+            padding: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        input[type='text'] {
+
+            display: inline-block;
+            padding: 10px 5px;
+            width: 40px;
+            margin: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-size: 600;
+
+        }
+        .input{padding:20px;}
+        .input table{text-align:center;display: block;
+        table-layout: fixed;
+        
+        }
+        .input .inputype {
+            padding: 10px 20px;
+            margin: 20px 0;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 18px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+            color: #1d1919 !important
+        }
+
+        .input input:focus {
+            box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.7), inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+            color: #000;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        .main div input {
+            cursor: pointer;
+        }
+
+        .step1 * {
+            display: inline;
+        }
+
+        .det1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: inline-block;
+            align-content: space-around;
+            border-left: 2px solid rgb(58, 55, 55);
+            border-right: 2px solid rgb(58, 55, 55);
+        }
+
+        .det1 div {
+            display: inline-block;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .solution {
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+            width: 82%;
+            margin: auto;
+            padding: 30px;
+            text-align: left;
+            padding: 30px 10px;
+            color: blue;
+
+        }
+
+        .steplist li {
+            display: block;
+            margin: 10px 0;
+            line-height: 1.5;
+
+        }
+
+        #longli {
+            overflow: scroll;
+            white-space: nowrap;
+
+        }
+
+        #longli::-webkit-scrollbar {
+            height: 3px;
+            width: 0;
+            background: rgb(126, 121, 121);
+        }
+        .solution table tr td.divide{padding: 10px auto;line-height: 1.5;white-space: nowrap;}
+       .solution table tr td.divide span{
+           margin: 3px;
+      border-bottom: 1px solid;
+
+       }
+        #longli::-webkit-scrollbar-button {
+            height: 3px;
+            box-shadow: 2px 2px -3px #666;
+        }
+
+        div.navigation {
+          position: sticky;
+          top: 5px;
+          z-index: 100;
+          background: #ffffff;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+
+            margin: auto;
+            padding: 20px;
+            width: 80%;
+
+
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            padding: 7px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+
+        }
+
+        .det1,
+        .det2 {
+
+            font-size: 17px;
+        }
+
+        .line {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+        }
+        
+        .description,
+        .example {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        section.description {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #longli input {
+            outline: none;
+            border: none;
+        }
+
+        .example .details {
+            list-style-type: disc;
+            font-size: 17px;
+            padding:7px;
+        }
+
+        .example .details li {
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width:600px) {
+            .input table{text-align: center;display: block;}
+            
+            header h1 {
+
+                font-size: 30px;
+                font-weight: 700;
+                border-bottom: 2px solid;
+            }
+            .details li figure{overflow: hidden;}
+            .details li figure img {
+                width: 100%;
+                transform: scale(1.5);
+            }
+
+            #time {
+                display: block;
+                padding-bottom: 10px;
+            }
+            .example{text-align: left;}
+            .navigation a {
+                width: 40%;
+                margin-bottom: 4%;
+                display: inline-block;
+                padding: 5px;
+            }
+
+            .example,
+            .description,
+            .solution {
+                width: 90%;
+            }
+            .input{overflow:hidden;}
+            .inputype{width: 40%;display: inline-block;overflow: auto;}
+        }
+    </style>
+
+</head>
+
+<body >
+
+    <header>
+        <div class="text-center">
+            <h1><a href="/">Percent Error Calculator</a></h1> <time id="time"></time>
+            <p>Percent error (percentage error ) is the difference between expremental and theoretical
+                value divided by the theoretical value , and multiplied by 100 . </p>
+        </div>
+    </header>
+
+    <div class="main" ng-app>
+        <!--main code-->
+
+        <div class="input description" id="ans" ng-init="a1=10;a2=12">
+            <table>
+                <tr>
+                    <td>Observed Value :</td>
+                    <td>
+                        <div class="x">
+                            <input type="number" value=a1   class="inputype" id="a1" placeholder="a1" ng-model="a1">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>True Value :</td>
+                    <td>
+                        <div class="y">
+                            <input type="number" value=a2   class="inputype" placeholder="a2" ng-model="a2">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr style="color: green;" data-ng-if="a1!=null && a2!=null">
+                    <td>Percent Error :</td>
+                    <div class="y">
+                        <td><b class="inputype" >{{((a1-a2)/a2)*100 | number:5}}%</b></td>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        
+        
+
+        <div class="navigation">
+            <a class="navg" href="#ans">Answer</a>
+            <a class="navg" href="#solution">Solution</a>
+            
+            <a class="navg" href="#explanation">Explanation</a>
+            <a class="navg" id="print">Print</a>
+        </div>
+        <!---solution-->
+        <div class="solution" id="solution">
+          
+            <h2>Solution -</h2>
+            <table>
+                <tr>
+                    <td>Percent Error</td>
+                    <td>=</td>
+                    <td class="divide"><span style="padding-bottom: 10px;">V<sub>true</sub>-V<sub>observed</sub></span> <br><b style="margin-top: 4px;display: inline-block;text-align: center;">V<sub>true</sub></b></td> 
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>=</td>
+                    <td class="divide"><span>({{a1}}) - ({{a2}})</span> <br> {{a2}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>=</td>
+                    <td class="divide"><span>{{a1-a2}}</span> <br> {{a2}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>=</td>
+                    <td ><span>{{(a1-a2)/a2}} %</span></td>
+                </tr>
+            </table>
+        </div>
+        <!--solution ends-->
+        <!--main code ends-->
+    
+    <section class="description">
+        <h2>Percent Error Formula</h2>
+        <div class="solution">
+            <table>
+                <tr style="font-size: 16px;line-height: ;">
+                    <td>Percent Error</td>
+                    <td>=</td>
+                    <td class="divide"><span style="padding-bottom: 10px;">( V<sub>true</sub>-V<sub>observed </sub>) x 100</span> <br><b style="margin-top: 4px;display: inline-block;text-align: center;">V<sub>true</sub></b></td> 
+                </tr>
+       </table>
+       </div>
+
+    </section>
+    <section class="example" id="explanation">
+        <h2>Example of percent Error -</h2>
+         <p>Percent errors tells you how big your errors are when you measure something in an expreiment.
+         <br>
+         <b style="color: rgb(170, 22, 184);">Ram measured the aria of a ground to be 400 cm<sup>2</sup>but the actual area of the ground has been
+        recorded as 430 cm<sup>2</sup> calculate thepercentage error of this measurement.</b>
+         </p>
+
+         <strong>solution :</strong>
+         <p style="color:green;">
+          Measured area of the ground = 400 cm<sup>2</sup><br>
+          Actual area of the ground = 430 cm<sup>2</sup>
+         <br>
+         <br>
+         <div class="solution">
+            <table>
+                <tr style="font-size: 16px;line-height: ;">
+                    <td>Percent Error</td>
+                    <td>=</td>
+                    <td class="divide"><span style="padding-bottom: 10px;">( V<sub>true</sub>-V<sub>observed </sub>) x 100</span> <br><b style="margin-top: 4px;display: inline-block;text-align: center;">V<sub>true</sub></b></td> 
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>=</td>
+                    <td class="divide"><span>(430 - 400) x 100</span> <br> 430 </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>=</td>
+                    <td class="divide"><span>-3000</span> <br>430 </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td>=</td>
+                    <td ><span> 6.976744 %</span></td>
+                </tr>
+               
+            </table>
+         </div>
+        </p>
+        
+
+
+    </section>
+    <section class="example">
+        <h2>What is Percent Error ?</h2>
+        <p>percent error is vector multiplication of two linear vector in a plane and the product of
+            those linear vector is perpendicular to both of those linear vectors.
+        </p>
+
+        <h2>What is the Experimental value in Percentage Error ?</h2>
+        <p>Experimental value in percent Error is the value that is actual value which we know accurately by experiment.</p>
+
+        <h2>What is True value or theoretical value in Percentage Error</h2>
+        <p>True value or theoretical value in percentage error is the the value that we assume.</p>
+
+        <h2>Percentage Error Important Properties </h2>
+        <ol class="details">
+            <li>Percent error is positive.</li>
+            
+
+
+            <li>
+                <p>
+                    Absolute error = |V<sub>true</sub> - V<sub>observed</sub>|
+                    <p>
+                    
+                    <table><tr>
+                    <td>Relative error = </td>
+                    <td><table><tr align="center"><td>|V<sub>true</sub> - V<sub>observed</sub>|</td></tr><tr><td bgcolor="#000000" height="1"></td></tr><tr align="center"><td>V<sub>true</sub></td></tr></table></td>
+                    </tr></table>
+                    
+                    <table><tr>
+                    <td>Percentage error = </td>
+                    <td><table><tr align="center"><td>|V<sub>true</sub> - V<sub>observed</sub>|</td></tr><tr><td bgcolor="#000000" height="1"></td></tr><tr align="center"><td>V<sub>true</sub></td></tr></table></td>
+                    <td> &#215; 100</td>
+                    </tr></table>
+            </li>
+        </ol>
+        
+
+    </section>
+
+
+    <footer>
+        <p>copyright&copy;2020 | <a href="/">Percent error calculator</a></p>
+        <div>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=31cb057d-6070-4bc2-bff2-7af95ea4b625"
+                title="DMCA.com Protection Status" class="dmca-badge"> <img
+                    src="https://images.dmca.com/Badges/dmca-badge-w250-5x1-09.png?ID=31cb057d-6070-4bc2-bff2-7af95ea4b625"
+                    alt="DMCA.com Protection Status" /></a>
+            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+        </div>
+    </footer>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+
+
+        $('#print').click(function (e) {
+            window.print();
+            e.preventDefault();
+        })
+        function tm() {
+            var t = new Date();
+            var lstr = t.toUTCString();
+            $('#time').html(lstr);
+            $('#time').attr('datetime', lstr)
+        }
+        setInterval(tm, 1)
+
+
+
+
+    </script>
+ 
+</body>
+
+</html>

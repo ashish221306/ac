@@ -2,20 +2,72 @@
 <html lang="en" ng-app="">
 
 <head>
-    <title>vector-product-calculator</title>
     <meta charset="utf-8">
+    <title>Cross Product Calculator - calculator90</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=description content="cross product calculator online with step-by-step answer, graph , property, example and explanation, best available calculator for cross product
+    ">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f1f1f1">
+    <meta name="apple-mobile-web-app-title" content="Cross Product Calculator with explanation">
+    <meta name="apple-touch-icon" content="zzinc/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="zzinc/apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta property="og:locale" content="en_US" />
+    <meta name=keywords
+        content="cross product calculator, cross product, vector cross product">
+    <meta property="og:site_name" content="calculator90">
+    <meta property="og:title" content="Cross Product Calculator">
+    <meta property="og:description" content="cross product calculator online with step-by-step answer, graph , property, example and explanation, best available calculator for cross product">
+    <meta property="og:type" content=Website>
+    <meta property="og:image" content="https://www.calculator90.com/">
+    <meta property="twitter:card" content='https://www.calculator90.com/'>
+    <meta property="twitter:title" content="Cross Product Calculator">
+    <meta property="twitter:description" content="cross product calculator online with step-by-step answer, graph , property, example and explanation, best available calculator for cross product">
+    <meta property="twitter:image" content="image url">
+    <link href="https://www.calculator90.com/" rel=canonical>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 
 
     <style>
+        table.stepp td {
+            padding: 5px;
+
+        }
+
+        table.stepp {
+            transform: translateY(10px);
+            margin: 6px;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            display: inline-block;
+        }
+        #time{
+           text-shadow: 3px -3px 3px hsl(0, 86%, 67%);
+           border-bottom: 2px solid #f1f1f1;
+           padding-bottom: 7px;
+        }
+        table.stepp tr {
+            display: block;
+        }
+
         html,
         body {
-            background: rgba(255,255,255,0.3);
+
+            overflow-x: hidden;
+            font-weight: 500;
+            scroll-behavior: smooth;
             margin: 0;
-            font-family: sans-serif;
-            font-size: 22px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            letter-spacing: 1px;
             color: rgb(25, 26, 25);
         }
 
@@ -26,20 +78,28 @@
             padding: 10px;
             box-shadow: 0px 0px 4px 2px #777;
         }
-        header h1{
-            text-shadow: 3px 3px 5px rgba(134, 225, 241, 0.7),-3px -3px 5px rgba(255,255,255,0.3);
+
+        header h1 {
+            text-shadow: 3px 3px 5px rgba(134, 225, 241, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
         }
+
         @media screen and (max-width:600px) {
             header h1 {
-               
+
                 font-size: 30px;
                 font-weight: 700;
                 border-bottom: 2px solid;
             }
+
+            .details li figure img {
+                width: 100%;
+                transform: scale(1.5);
+            }
+            #time{display: block;padding-bottom: 10px;}
         }
 
         header p {
-            
+
             padding: 10px 40px;
 
         }
@@ -50,21 +110,25 @@
         }
 
         footer {
-margin-top: 20px;
+            margin-top: 20px;
             background-color: #000;
             opacity: 0.8;
-            padding: 20px;
-            min-height: 20px;
+            padding: 5px;
             text-align: center;
             color: antiquewhite;
         }
 
-       
+        footer a,
+        header a {
+            text-decoration: none;
+            color: #f1f1f1;
+        }
+
 
         .formula {
             padding: 10px;
             font-weight: 600;
-            
+
 
         }
 
@@ -77,11 +141,11 @@ margin-top: 20px;
         .example {
             padding: 20px;
             margin-bottom: 20px;
-            
+
         }
 
-       input[type='text'] {
-            
+        input[type='text'] {
+
             display: inline-block;
             padding: 10px 5px;
             width: 40px;
@@ -89,120 +153,175 @@ margin-top: 20px;
             text-align: center;
             font-size: 18px;
             font-size: 600;
-        
+
         }
-        .input input{
-            padding:10px  20px;
-        margin: 20px 0;
-        border-radius: 50px;
-        border: none;
-        background:transparent;
-        outline: none;
-        font-size: 18px;
-        box-shadow: 3px 3px 5px rgba(0,0,0,0.7),-3px -3px 5px rgba(255,255,255,0.3);
-        color: #1d1919!important
+
+        .input input {
+            padding: 10px 20px;
+            margin: 20px 0;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 18px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+            color: #1d1919 !important
         }
-       .input input:focus{
-         box-shadow:inset 3px 3px 5px rgba(0,0,0,0.7),inset -3px -3px 5px rgba(255,255,255,0.3);
-         color: #000;
-    }
-        .main{
+
+        .input input:focus {
+            box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.7), inset -3px -3px 5px rgba(255, 255, 255, 0.3);
+            color: #000;
+        }
+
+        .main {
             text-align: center;
         }
-        .main div input{cursor: pointer;}
-        .step1 *{
+
+        .main div input {
+            cursor: pointer;
+        }
+
+        .step1 * {
             display: inline;
         }
-        .det1{
+
+        .det1 {
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             align-items: center;
             display: inline-block;
             align-content: space-around;
             border-left: 2px solid rgb(58, 55, 55);
             border-right: 2px solid rgb(58, 55, 55);
         }
-        .det1 div{
+
+        .det1 div {
             display: inline-block;
             margin: 10px;
-            width: 200px;}
-        .solution{
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.7),-3px -3px 5px rgba(255,255,255,0.3);
+            width: 200px;
+        }
+
+        .solution {
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
             width: 82%;
             margin: auto;
             padding: 30px;
             text-align: left;
             padding: 30px 10px;
             color: blue;
-            
+
         }
-        .steplist li{
+
+        .steplist li {
             display: block;
             margin: 10px 0;
             line-height: 1.5;
-            
+
         }
-        #longli{
-            overflow:scroll;
+
+        #longli {
+            overflow: scroll;
             white-space: nowrap;
 
         }
-        #longli::-webkit-scrollbar{
+
+        #longli::-webkit-scrollbar {
             height: 3px;
             width: 0;
             background: rgb(126, 121, 121);
         }
-        #longli::-webkit-scrollbar-button{
+
+        #longli::-webkit-scrollbar-button {
             height: 3px;
             box-shadow: 2px 2px -3px #666;
         }
-        .navigation{
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.7),-3px -3px 5px rgba(255,255,255,0.3);
-            display: block;
+
+        div.navigation {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0;
+            top: 0;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+
             margin: auto;
             padding: 20px;
             width: 80%;
+
+
             margin-bottom: 20px;
         }
-        .navigation button{
-        padding: 7px;
-            
+
+        .navigation a {
+            padding: 7px;
+            text-decoration: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+
         }
-       .det1,.det2{
-          
-           font-size: 17px;
-       }
-       .line{
-           width: 80%;
-           margin: auto;
-           padding: 10px;
-           margin-top: 20px;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.7),-3px -3px 5px rgba(255,255,255,0.3);}
-        .description,.example{
+
+        .det1,
+        .det2 {
+
+            font-size: 17px;
+        }
+
+        .line {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .description,
+        .example {
             width: 80%;
             margin: auto;
             margin-top: 20px;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.7),-3px -3px 5px rgba(255,255,255,0.3);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7), -3px -3px 5px rgba(255, 255, 255, 0.3);
         }
-        section.description{
+
+        section.description {
             padding: 20px;
             text-align: center;
         }
-        @media screen and (max-width:600px){
-            .navigation button{
-                width: 80px;
+
+        #longli input {
+            outline: none;
+            border: none;
+        }
+
+        .example .details {
+            list-style-type: disc;
+        }
+
+        .example .details li {
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width:600px) {
+            .navigation a {
+                width: 40%;
+                margin-bottom: 4%;
+                display: inline-block;
                 padding: 5px;
+            }
+
+            .example,
+            .description,
+            .solution {
+                width: 90%;
             }
         }
     </style>
 
 </head>
 
-<body >
+<body>
 
     <header>
         <div class="text-center">
-            <h1>Vector Product Calculator</h1>
+            <h1><a href="/">Vector Product Calculator</a></h1> <span id="time"></span>
             <p>Cross product or vector product is the binary operation on two vectors
                 in 3D (three dimentional space). cross product is perpendicular to both linearly independent vector and
                 normal to the plane
@@ -213,100 +332,117 @@ margin-top: 20px;
     <div class="main">
         <!--main code-->
 
-<div class="line">
-    
-    <p style="letter-spacing:1px;">L1=a<sub>1</sub>&#238;+b<sub>1</sub>&#309;+c<sub>1</sub>k&#0770;</p>
-    <p style="letter-spacing:1px;">L1=a<sub>2</sub>&#238;+b<sub>2</sub>&#309;+c<sub>2</sub>k&#0770;</p>
-</div>
+        <div class="line">
 
-    <div class="input">
-        <div class="x">
-        <input type="text"  placeholder="_" ng-value="3"  ng-model="a1">
-        <input type="text"  placeholder="_"  ng-model="b1">
-        <input type="text"  placeholder="_"  ng-model="c1">
-    </div>
-
-    <div class="y">
-        <input type="text"  placeholder="_"  ng-model="a2">
-        <input type="text"  placeholder="_"  ng-model="b2">
-        <input type="text"  placeholder="_"  ng-model="c2">
-    </div>
-
-       
-</div>
-<div data-ng-if="a1!=null && a2!=null && b1!=null && b2!=null && c1!=null && c2!=null">
-    <h2 id="ans">ans= {{b1*c2-c1*b2}}i+{{a1*c2-c1*a2}}j+{{a1*b2-a2*b1}}k</h2>
-</div>
-
-<div class="navigation">
-<button id="answer">Answer</button>
-<button id="solution">Solution</button>
-<button id="graph">Graph</button>
-<button id="print">print</button>
-</div>
-<!---solution-->
-<div class="solution">
-    <h2>Solution -</h2>
-    <div class="step1">
-       
-    <ol class="steplist">
-        <li><p>L=L1 X L2</p><br></li>
-        <li id="longli"> 
-            L=+&#238;
-            <div>
-                <div class="det1">
-                   <div>
-                    <input type="text" readonly value="{{a1}}" >
-                    <input type="text" readonly value="{{a2}}">
-                   </div>
-                   <br>
-                   <div class="det2">
-                    <input type="text" readonly value="{{b1}}">
-                    <input type="text" readonly value="{{b2}}">
-                   </div>
-                    
-                </div>
+            <p style="letter-spacing:1px;">L1=a<sub>1</sub>&#238;+b<sub>1</sub>&#309;+c<sub>1</sub>k&#0770;</p>
+            <p style="letter-spacing:1px;">L1=a<sub>2</sub>&#238;+b<sub>2</sub>&#309;+c<sub>2</sub>k&#0770;</p>
+        </div>
+        <p style="text-align: center;border-bottom: 0.6px dashed;color: rgb(230, 27, 186);">please input the factors of
+            the lines bellow</p>
+        <div class="input description">
+             <div class="x">
+                <input type="text" id="a1" placeholder="a1" ng-model="a1">
+                <input type="text" placeholder="b1" ng-model="b1">
+                <input type="text" placeholder="c1" ng-model="c1">
             </div>
-            +&#309;
-            <div>
-                <div class="det1 det2">
-                   <div>
-                    <input type="text" readonly value="{{a1}}" >
-                    <input type="text" readonly value="{{a2}}" >
-                   </div>
-                   <br>
-                   <div>
-                    <input type="text" readonly value="{{b1}}" >
-                    <input type="text" readonly value="{{b2}}" >
-                   </div>
-                    
-                </div>
+
+             <div class="y">
+                <input type="text" placeholder="a2" ng-model="a2">
+                <input type="text" placeholder="b2" ng-model="b2">
+                <input type="text" placeholder="c2" ng-model="c2">
             </div>
-            +k&#0770;
-            <div>
-                <div class="det1 det3">
-                   <div>
-                    <input type="text" readonly value="{{a1}}">
-                    <input type="text" readonly value="{{a2}}">
-                   </div>
-                   <br>
-                   <div>
-                    <input type="text" readonly value="{{b1}}">
-                    <input type="text" readonly value="{{b2}}">
-                   </div>
-                </div>
+
+
+        </div>
+        <!--data-ng-if="a1!=null && a2!=null && b1!=null && b2!=null && c1!=null && c2!=null"-->
+        <div class="navigation" style="margin-top: 20px;">
+            <h2>Answer -</h2>
+            <p id="ans">ans= ({{b1*c2-b2*c1}})&#238; - ({{a1*c2-a2*c1}})&#309; + ({{a1*b2-a2*b1}})k&#0770;</p>
+            
+
+
+        </div>
+
+        <div class="navigation">
+            <a class="navg" href="#ans">Answer</a>
+            <a class="navg" href="#solution">Solution</a>
+            <a class="navg" href="#graph">Graph</a>
+            <a class="navg" href="#explanation">Explanation</a>
+            <a class="navg" id="print">Print</a>
+        </div>
+        <!---solution-->
+        <div class="solution" id="solution">
+            <canvas id="canvasId" style="position: absolute; width:240px; height:240px; left: 0; top:; border: none;"
+                width="480" height="480"></canvas>
+            <h2>Solution -</h2>
+            <div class="step1">
+
+                <ol class="steplist">
+                    <li>
+                        <p>L=L1 X L2</p><br>
+                    </li>
+                    <li>
+                        <p>L=
+                        <div>
+                            &#238; <table class="stepp">
+                                <tr>
+                                    <td>{{b1}}</td>
+                                    <td>{{c1}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>{{b2}}</td>
+                                    <td>{{c2}}</td>
+                                </tr>
+                            </table>
+
+                            -&#309;<table class="stepp">
+                                <tr>
+                                    <td>{{a1}}</td>
+                                    <td>{{c1}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>{{a2}}</td>
+                                    <td>{{c2}}</td>
+                                </tr>
+                            </table>
+
+                            +k&#0770;<table class="stepp">
+                                <tr>
+                                    <td>{{a1}}</td>
+                                    <td>{{b1}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>{{a2}}</td>
+                                    <td>{{b2}}</td>
+                                </tr>
+                            </table>
+
+
+                        </div>
+                        </p>
+                    </li>
+
+
+                    <li>
+                        <p>L=&#238; [{{b1}}.{{c2}}-{{b2}}.{{c1}}]- &#309; [{{a1}}.{{c2}} -{{a2}}.{{c1}}]+ k&#0770;
+                            [{{a1}}.{{b2}}-{{a2}}.{{b1}}]</p>
+                    </li>
+
+                    <li>
+                        <p>L=&#238; [{{b1*c2}} - {{b2*c1}}] - &#309; [{{a1*c2}} - {{a2*c1}}] + k&#0770;
+                            [{{a1*b2}}-{{a2*b1}}]</p>
+                    </li>
+                    <li>
+                        <p>L= ({{b1*c2-b2*c1}})&#238; - ({{a1*c2-a2*c1}})&#309; + ({{a1*b2-a2*b1}})k&#0770;</p>
+                    </li>
+
+                </ol>
             </div>
-           </p><br>
-           <br></li>
-        <li><p>L=&#238; [{{a1}}.{{b2}} +{{a2}}.{{b1}}]- &#309; [{{a1}}.{{b2}} +{{a2}}.{{b1}}]+ k&#0770; [{{a1}}.{{b2}}+{{a2}}.{{b1}}]</p></li>
-        <li><p>L=&#238; [{{a1}}.{{b2}} +{{a2}}.{{b1}}]- &#309; [{{a1}}.{{b2}} +{{a2}}.{{b1}}]+ k&#0770; [{{a1}}.{{b2}} +{{a2}}.{{b1}}]</p></li>
-        <li><p>L=&#238; [{{a1*b2}} +{{a2*b1}}] + &#309; [{{a1*b2}} +{{a2*b1}}] + k&#0770; [{{a1*b2}}+{{a2*b1}}]</p></li>
-        <li><p>L= {{a1*b2+a2*b1}}&#238; +  {{a1*b2+a2*b1}}&#309; +  {{a1*b2+a2*b1}}k&#0770;</p></li>
-        
-    </ol>
-    </div>
-</div>
-<!--solution ends-->
+        </div>
+        <!--solution ends-->
 
 
 
@@ -323,7 +459,7 @@ margin-top: 20px;
 
         <!--main code ends-->
     </div>
-    <section class="description">
+    <section class="description" id="graph">
         <h2>cross product formula</h2>
         <div class="text-center">
             <figure class="figure text-center">
@@ -348,47 +484,136 @@ margin-top: 20px;
     </section>
     <section class="example">
         <h2>Example -</h2>
-        <p>The cross product of a = (2,3,4) and b = (5,6,7)</p>
+
+        <p>A × B = (Ax î + Ay ĵ + Az k̂) × (Bx î + By ĵ + Bz k̂)</p>
         <ol>
             <li>cx = aybz − azby = 3×7 − 4×6 = −3</li>
             <li>cy = azbx − axbz = 4×5 − 2×7 = 6</li>
             <li>cz = axby − aybx = 2×6 − 3×5 = −3</li>
         </ol>
         <b>Answer: a × b = (−3,6,−3)</b>
+
+
+    </section>
+    <section class="example">
+        <h2>What is cross product ?</h2>
+        <p>Cross product is vector multiplication of two linear vector in a plane and the product of
+            those linear vector is perpendicular to both of those linear vectors.
+        </p>
+
+        <h2>What is the cross vector ?</h2>
+        <p>Cross vectors are the vectors which are not parallel to each other . There is some angle between them.</p>
+
+
+        <h2>Cross Product Important Properties </h2>
+        <ol class="details">
+            <li>A vector's magnitude is it's <span style="color: rgb(235, 179, 77);">Length</span>.</li>
+            <li>A vector has <b style="color:aquamarine;border: 0.7px solid red;">magnitude</b> and <b
+                    style="color: aquamarine;border: 0.7px solid red;">direction</b>.</li>
+            <li>Length of the cross product of two vectors
+                <span style="color:red">A(a<sub>1</sub>&#238;+b<sub>1</sub>&#309;+c<sub>1</sub>k&#0770;)</span>
+                and <span style="color:red">B(a<sub>2</sub>&#238;+b<sub>2</sub>&#309;+c<sub>2</sub>k&#0770;)</span>
+                <br>
+                =&radic;(A<sup>2</sup> +B<sup>2</sup>)
+            </li>
+
+            <li>Cross Product <b>A x B</b> is another vector which is at <b>right angel</b> to <b>both the vectors</b>.
+            </li>
+            <li>
+                Right hand rule <b>Cross Product</b><br>
+                Right hand rule is demonstration of cross product , in <b>right hand rule</b> if we put our right hand's
+                <b>index finger</b> along vector a
+                and <b>middle finger</b> along <b>vector b </b>then <b style="color:blueviolet;">a x b</b> will be in
+                the direction of <b style="color: blueviolet;">thumb</b>.
+                <img src="./cross_product_right_hand-rule.jpg">
+            </li>
+            <li>Cross Product of two vectors is also a vector.</li>
+            <li>Length of the product of two vector is equal to the area of parellelogram determined by two vectors.
+            </li>
+            <li>
+                The direction of the cross product is in the direction orthogonal to both .<br>
+                <figure>
+                    <img width="80%"
+                        src="./cross_product_calculator_images/cross-product_calculator_magnitude_and_direction.jpg"
+                        alt="cross product calculator">
+                </figure>
+
+            </li>
+            <li>If two vectors are linear then cross multiplicarion of those two vectors will be zero<br>
+                <figure>
+                    <img width="80%" src="./cross_product_calculator_images/cross-product_calculator_axa0.jpg"
+                        alt="cross-product_of_two_linear_vector">
+                </figure>
+            </li>
+
+            <li id="explanation">
+                Cross Product calculation of two similar vectors - <br>
+                <figure>
+                    <img width="80%" src="./cross_product_calculator_images/cross_product_example.jpg"
+                        alt="cross_product_calculation">
+                </figure>
+            </li>
+            <li>
+                How to find angle and direction between the vectors and cross product of two vectors ? <br>
+                <figure>
+                    <img width="80%"
+                        src="./cross_product_calculator_images/cross-product_calculator_right_hand_rule.jpg"
+                        alt="cross-product_of_two_vectors" title="cross product of two vectors">
+                </figure>
+            </li>
+
+            <li>Cross product of two vectors becomes zero when the angle between them is zero mean they are colinear.
+                <br>
+                <figure>
+                    <img width="80%" src="./cross_product_calculator_images/cross-product_calculator_axb0.jpg"
+                        alt="cross_product_calculor" title="cross product of two colinear vectors">
+                </figure>
+            </li>
+            <li>
+                Orthogonal cross product <br>
+                <figure>
+                    <img width="80%" src="./cross_product_calculator_images/cross-product_calculator_orthogonal.jpg"
+                        alt="orthogonal_cross_product" title="orthogonal cross product">
+                </figure>
+            </li>
+        </ol>
+
+
     </section>
 
 
     <footer>
-        <p>copyright&copy;2020</p>
+        <p>copyright&copy;2020 | <a href="/">cross product calculator</a></p>
+        <div>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=31cb057d-6070-4bc2-bff2-7af95ea4b625"
+                title="DMCA.com Protection Status" class="dmca-badge"> <img
+                    src="https://images.dmca.com/Badges/dmca-badge-w250-5x1-09.png?ID=31cb057d-6070-4bc2-bff2-7af95ea4b625"
+                    alt="DMCA.com Protection Status" /></a>
+            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+        </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-    
-
-       $(document).ready(function(){
-        var a1=$('#a1').val();
-         var b1=$('#b1').val();
-         var c1=$('#c1').val();
-         var a2=$('#a2').val();
-         var b2=$('#b2').val();
-         var c2=$('#c2').val();
-        
-       
-
-    if(a1!=null|| b1!=null ||c1!=null||a2!=null||b2!=null||c2!=null){
-       $('#ans').css('display','none')
-    }else{
-        $('#ans').css('display','block')
-    }
-       })
-      
 
 
 
+        $('#print').click(function (e) {
+            window.print();
+            e.preventDefault();
+        })
+       function tm(){
+        var t=new Date();
+        var lstr=t.toUTCString();
+        $('#time').html(lstr);
+       }
+       setInterval(tm,1)
 
+
+     
 
     </script>
+    
 </body>
 
 </html>
